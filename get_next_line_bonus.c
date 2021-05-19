@@ -31,7 +31,7 @@ int	reads_content(int fd, char **line, char *buffer)
 
 int	get_next_line(int fd, char **line)
 {
-	static char buffer[100][4096];
+	static char buffer[1024][4096];
 
 	if (!line || read(fd, 0, 0) == -1 || BUFFER_SIZE <= 0)
 		return (-1);
